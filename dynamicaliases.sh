@@ -44,10 +44,11 @@ function cs {
     check_help_c $1
     _alias_name_valid "$@"
     if [ -z "$exit_message" ]; then
-        _purge_line_c "$ALIASES" "export ALIAS_$1="
+        ALIAS=$1
+        _purge_line_c "$ALIASES" "export ALIAS_$ALIAS="
         shift;
         COMMAND=$@
-        echo "export ALIAS_$1=\"$COMMAND\"" >> $ALIASES
+        echo "export ALIAS_$ALIAS=\"$COMMAND\"" >> $ALIASES
     fi
 }
 
