@@ -88,7 +88,7 @@ function cl {
 # list aliases without commands
 function _cl {
     source $ALIASES
-    env | grep "^ALIAS_" = cut -c7- | sort | grep "^.*=" | cut -f1 -d "="
+    env | grep "^ALIAS_" | cut -c7- | sort | grep "^.*=" | cut -f1 -d "="
 }
 
 # validate alias name
