@@ -7,3 +7,17 @@ Install
 2. cd dynamicaliases
 3. make install
 4. source ~/.local/bin/dynamicaliases.sh from within your ~/.bash_profile or ~/.bashrc file.
+
+Usage
+====
+
+```
+cs   <alias_name> <command> - Saves the given command as "alias_name"
+c    <alias_name>           - Runs the command associated with "alias_name"
+ci   <alias_name>           - Prints the command associated with "alias_name"
+cdel <alias_name>           - Deletes the alias
+cl                          - Lists all available aliases
+```
+
+The `c`, `ci`, and `cdel` commands all include tab completion. Aliases are stored in the `.saliases` file in your HOME
+directory.
