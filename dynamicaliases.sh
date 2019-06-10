@@ -56,7 +56,9 @@ function cs {
 function c {
     check_help_c $1
     source $ALIASES
-    target="$(eval $(echo echo $(echo \$ALIAS_$1)))"
+    COMMAND=$1
+    shift
+    target="$(eval $(echo echo $(echo \$ALIAS_$COMMAND $@)))"
     echo "$target"
     eval $target
 }
@@ -135,7 +137,7 @@ function check_help_c {
     if [ "$1" = "-h" ] || [ "$1" = "-help" ] || [ "$1" = "--help" ] ; then
         echo ''
         echo 'cs   <alias_name> <command> - Saves the given command as "alias_name"'
-        echo 'c    <alias_name>           - Runs the command associated with "alias_name"'
+        echo 'c    <alias_name> [args]    - Runs the command associated with "alias_name", optionally appending given arguments'
         echo 'ci   <alias_name>           - Inspect the alias associatd with "alias_name"'
         echo 'cdel <alias_name>           - Deletes the alias'
         echo 'cl                          - Lists all available aliases'

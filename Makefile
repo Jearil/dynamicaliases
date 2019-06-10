@@ -13,7 +13,7 @@ install:
 	@echo "USAGE:"
 	@echo "------"
 	@echo 'cs   <alias_name> <command> - Saves the given command as "alias_name"'
-	@echo 'c    <alias_name>           - Runs the command associated with "alias_name"'
+	@echo 'c    <alias_name> [args]    - Runs the command associated with "alias_name", optionally appending given arguments'
 	@echo 'ci   <alias_name>           - Prints the command associated with "alias_name"'
 	@echo 'cdel <alias_name>           - Deletes the alias'
 	@echo 'cl                          - Lists all available aliases'

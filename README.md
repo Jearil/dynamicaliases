@@ -13,7 +13,7 @@ Usage
 
 ```
 cs   <alias_name> <command> - Saves the given command as "alias_name"
-c    <alias_name>           - Runs the command associated with "alias_name"
+c    <alias_name> [args]    - Runs the command associated with "alias_name", optionally appending given arguments
 ci   <alias_name>           - Prints the command associated with "alias_name"
 cdel <alias_name>           - Deletes the alias
 cl                          - Lists all available aliases
